@@ -5,14 +5,16 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Appchara.co.APPchara.Model.UserModel;
 
 @RestController
+@RequestMapping("/api/v1/auth/user")
 public class UserController {
 
-    @GetMapping("/User")
+    @GetMapping("/all")
     public UserModel getUser(){
         return new UserModel(1, "jeven 11", "jeven.11@email.com", "jeven11");
     }

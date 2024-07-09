@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.Appchara.co.APPchara.Model.Product;
 import com.Appchara.co.APPchara.NotFoundException.ProductNotFoundException;
@@ -15,6 +16,7 @@ import com.Appchara.co.APPchara.Repository.ProductRepository;
 
 
 @RestController
+@RequestMapping("/api/v1/product")
 public class ProductController {
 
     ProductRepository repo;
@@ -24,7 +26,7 @@ public class ProductController {
     }
 
 
-    @GetMapping("/Products")
+    @GetMapping("/all")
     public List<Product> getProducts(){
         return repo.findAll();
     }
