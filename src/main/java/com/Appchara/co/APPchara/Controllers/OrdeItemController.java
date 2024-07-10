@@ -24,7 +24,7 @@ public class OrdeItemController {
         this.repo =repo;
     }
 
-    @GetMapping("/OrderItem")
+    @GetMapping("/all")
     public List<OrderItem> getOrderItem(){
         return repo.findAll();
     }
