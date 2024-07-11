@@ -12,6 +12,7 @@ public class Product {
     private String productname;
     private String description;
     private double price;
+    private String url;
 
     Product(){}
 
@@ -19,6 +20,7 @@ public class Product {
         this.productname = productname;
         this.description = description;
         this.price = price;
+        this.url = url;
     }
 
     //setter
@@ -32,6 +34,10 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+    
+    public void seturl(String url) {
+        this.url = url;
     }
 
     //getters
@@ -49,6 +55,10 @@ public class Product {
 
     public double getPrice() {
         return price;
+    }
+
+    public String geturl(){
+        return url;
     }
 
 }
